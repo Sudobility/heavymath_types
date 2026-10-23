@@ -89,9 +89,7 @@ export type TournamentCondition = {
 };
 
 export type ConditionData =
-  | WinLossCondition
-  | MatchScoreCondition
-  | TournamentCondition;
+  WinLossCondition | MatchScoreCondition | TournamentCondition;
 
 // ============================================================================
 // Encoding / Decoding
