@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/heavymath_types",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "Comprehensive TypeScript types, interfaces, and utilities for Heavymath prediction market applications",
   "type": "module",
   "main": "./dist/index.js",
@@ -41,17 +41,17 @@
   "author": "Heavymath",
   "license": "BUSL-1.1",
   "devDependencies": {
-    "@eslint/js": "~9.39.2",
-    "@types/node": "~24.10.2",
-    "@typescript-eslint/eslint-plugin": "~8.53.1",
-    "@typescript-eslint/parser": "~8.53.1",
-    "eslint": "~9.39.2",
+    "@eslint/js": "~9.39.5",
+    "@types/node": "~24.19.2",
+    "@typescript-eslint/eslint-plugin": "~8.72.0",
+    "@typescript-eslint/parser": "~8.72.0",
+    "eslint": "~9.39.5",
     "eslint-config-prettier": "~10.1.8",
-    "eslint-plugin-prettier": "~5.5.5",
+    "eslint-plugin-prettier": "~5.5.7",
     "globals": "~16.5.0",
-    "prettier": "~3.7.4",
+    "prettier": "~3.9.10",
     "typescript": "~5.9.3",
-    "vitest": "~4.0.17"
+    "vitest": "~4.1.12"
   },
   "peerDependencies": {
     "viem": "^2.0.0"
