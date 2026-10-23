@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/heavymath_types",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "description": "Comprehensive TypeScript types, interfaces, and utilities for Heavymath prediction market applications",
   "type": "module",
   "main": "./dist/index.js",
@@ -66,6 +66,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnqh/heavymath_types.git"
+    "url": "https://github.com/Sudobility/heavymath_types.git"
   }
 }
