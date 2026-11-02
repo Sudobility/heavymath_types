@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/heavymath_types",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "description": "Comprehensive TypeScript types, interfaces, and utilities for Heavymath prediction market applications",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.esm.json",
+    "build": "tsc -p tsconfig.esm.json && node scripts/fix-esm-imports.mjs",
     "clean": "rm -rf dist",
     "dev": "bunx tsc --watch",
     "typecheck": "bunx tsc --noEmit",
