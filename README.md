@@ -2,11 +2,20 @@
 
 Zero-dependency TypeScript types for the Heavymath prediction market platform.
 
+Pure type definitions and small runtime helpers (enum value arrays, type
+guards, condition encode/decode, sports/game-status classifiers) shared across
+the Heavymath packages. No runtime dependencies; `viem` is an optional peer
+(only for structural compatibility of the `Hex`/`Address` types in `events.ts`).
+Published to **GitHub Packages** under the `@sudobility` scope. ESM only.
+
 ## Installation
 
 ```bash
 bun add @sudobility/heavymath_types
 ```
+
+The `@sudobility` scope resolves to GitHub Packages (see `.npmrc`), so consumers
+need a GitHub token with `read:packages` configured in their own `~/.npmrc`.
 
 ## Usage
 
@@ -57,13 +66,19 @@ Blockchain event argument interfaces for PredictionMarket, DealerNFT, and Oracle
 
 ## Development
 
+Requires [Bun](https://bun.sh). Install dependencies with `bun install` first.
+
 ```bash
-bun run build        # Build ESM + CJS to dist/
-bun run test         # Run Vitest
-bun run typecheck    # TypeScript validation
-bun run lint         # ESLint check
-bun run verify       # Typecheck + lint + build
+bun run build        # Build ESM to dist/ (tsc + fix-esm-imports.mjs)
+bun run test:unit    # Run Vitest once (bun run test:watch for watch mode)
+bun run typecheck    # TypeScript validation (--noEmit)
+bun run lint         # ESLint check (bun run lint:fix to auto-fix)
+bun run format       # Prettier (bun run format:check to verify)
+bun run verify       # typecheck + lint + build (run before committing)
 ```
+
+The build emits ESM `.js` + `.d.ts` to `dist/`; `scripts/fix-esm-imports.mjs`
+rewrites relative import specifiers to Node-resolvable paths after `tsc`.
 
 ## Related Packages
 
