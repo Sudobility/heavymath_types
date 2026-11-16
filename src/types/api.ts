@@ -7,6 +7,7 @@
  * This file defines the data payload types used within those responses
  */
 
+import type { HealthResponse } from '@sudobility/types';
 import { Optional } from './common.js';
 import { MarketStatus, WithdrawalType } from './entities.js';
 
@@ -297,14 +298,21 @@ export interface MarketStatsData {
 }
 
 /**
- * Health check data returned by API endpoints.
+ * Generic health-check response payload shared across Sudobility services.
+ * Re-exported from `@sudobility/types` so heavymath consumers have a single
+ * import site for the basic `{ status, version }` health shape.
  */
-export interface HealthData {
-  /** Current health status of the service */
-  status: 'healthy' | 'unhealthy';
-  /** Unix timestamp (milliseconds) when the health check was performed */
-  timestamp: number;
-}
+export type { HealthResponse, HealthCheckData } from '@sudobility/types';
+
+/**
+ * Basic health check data returned by the indexer's root `/health` endpoint.
+ *
+ * @deprecated Alias of the generic {@link HealthResponse} (`{ status, version }`)
+ * from `@sudobility/types`. This replaces the former bespoke `{ status, timestamp }`
+ * shape; the name is kept as a backward-compatible alias. Prefer importing
+ * `HealthResponse` directly in new code.
+ */
+export type HealthData = HealthResponse;
 
 /**
  * SSE (Server-Sent Events) connection statistics data.

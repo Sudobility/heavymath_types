@@ -85,6 +85,8 @@ export type {
   OracleRequestData,
   MarketStateHistoryData,
   MarketStatsData,
+  HealthResponse,
+  HealthCheckData,
   HealthData,
   SSEStatsData,
   WalletFavoriteData,
